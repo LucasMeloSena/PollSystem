@@ -1,0 +1,34 @@
+{
+  "name": "pollsystem",
+  "version": "1.0.0",
+  "description": "Real-time polling system!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsx watch src/http/server.ts",
+    "services:up": "docker compose -f src/infra/docker-compose.yaml up -d",
+    "services:down": "docker compose -f src/infra/docker-compose.yaml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasMeloSena/PollSystem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasMeloSena/PollSystem/issues"
+  },
+  "homepage": "https://github.com/LucasMeloSena/PollSystem#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "prisma": "^5.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@prisma/client": "^5.9.1",
+    "fastify": "^4.26.0",
+    "zod": "^3.22.4"
+  }
+}
