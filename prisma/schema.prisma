@@ -13,7 +13,7 @@ model Poll {
   createdAt DateTime     @default(now())
   updatedAt DateTime     @default(now())
   options   PollOption[]
-  vote     Vote[]
+  vote      Vote[]
 }
 
 model PollOption {
@@ -29,7 +29,7 @@ model Vote {
   id           Int      @id @default(autoincrement())
   sessionId    String
   pollOptionId String
-  pollId     String
+  pollId       String
   createdAt    DateTime @default(now())
 
   poll       Poll       @relation(fields: [pollId], references: [id])
